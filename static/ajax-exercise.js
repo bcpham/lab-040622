@@ -20,11 +20,9 @@ document.querySelector('#get-fortune-button').addEventListener('click', showFort
 function showWeather(evt) {
   evt.preventDefault();
 
-  // const queryString = new URLSearchParams(${zipcode}).toString();
-  const queryString = new URLSearchParams(zipcode)
-
-  const url = `/weather.json?${zipcode}${queryString}`;
   const zipcode = document.querySelector('#zipcode-field').value;
+
+  const url = `/weather.json?zipcode=${zipcode}`;
 
   // TODO: request weather with that URL and show the forecast in #weather-info
 
